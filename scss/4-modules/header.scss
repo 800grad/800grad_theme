@@ -1,0 +1,568 @@
+.mainheader {
+  width: 100%;
+  top: 0;
+  background-color: $light;
+  animation: fadeInFromNone 2s ease-out;
+  z-index: 4;
+  position: fixed;
+
+  font-size: $mobile-unit;
+  line-height: $mobile-unit-xlarge;
+  box-shadow: 0 $mobile-unit-xxsmall $mobile-unit-xxsmall $muted;
+
+  @media screen and (min-width: $tablet-device) {
+    font-size: $tablet-unit;
+    line-height: $tablet-unit-xlarge;
+    box-shadow: 0 $tablet-unit-xxsmall $tablet-unit-xxsmall $muted;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    font-size: $laptop-unit;
+    line-height: $laptop-unit-xlarge;
+    box-shadow: 0 $laptop-unit-xxsmall $laptop-unit-xxsmall $muted;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    font-size: $desktop-unit;
+    line-height: $desktop-unit-xlarge;
+    box-shadow: 0 $desktop-unit-xxsmall $desktop-unit-xxsmall $muted;
+  }
+
+  > .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+
+    height: $mobile-unit-xxlarge;
+
+    max-width: $desktop-device;
+
+    @media screen and (min-width: $tablet-device) {
+      height: calc(3 * #{$tablet-unit});
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      height: calc(3 * #{$laptop-unit});
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      height: calc(3 * #{$desktop-unit});
+    }
+  }
+
+  .navtoggleinput {
+    display: none;
+  }
+
+  .navtoggle {
+    position: absolute;
+
+    right: $mobile-unit-xlarge;
+    top: $mobile-unit;
+
+    @media screen and (min-width: $tablet-device) {
+      display: none;
+    }
+  }
+
+  .navtoggle span,
+  .navtoggle span:before,
+  .navtoggle span:after {
+    cursor: pointer;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+
+    border-radius: $mobile-unit-xxsmall;
+    height: $mobile-unit-xsmall;
+    width: $mobile-unit-xlarge;
+
+    @media screen and (min-width: $tablet-device) {
+      display: none;
+    }
+  }
+
+  .navtoggle span:before {
+    top: -$mobile-unit-small;
+    height: $mobile-unit-small;
+    border-bottom: $mobile-unit-xsmall solid $light;
+  }
+
+  .navtoggle span:after {
+    bottom: -$mobile-unit-small;
+    height: $mobile-unit-small;
+    border-top: $mobile-unit-xsmall solid $light;
+  }
+
+  .navtoggleinput:not(:checked) ~ .mainnav {
+    display: none;
+
+    @media screen and (min-width: $tablet-device) {
+      display: flex;
+    }
+  }
+
+  .mainnav {
+    position: absolute;
+    left: 0;
+    background-color: $light;
+    right: 0;
+    text-align: left;
+
+    top: $mobile-unit-xxlarge;
+    padding: $mobile-unit;
+    box-shadow: 0 $mobile-unit-xxsmall $mobile-unit-xxsmall $muted;
+    line-height: $mobile-unit-large;
+
+    @media screen and (min-width: $tablet-device) {
+      position: static;
+      display: flex;
+      padding: 0;
+      line-height: $tablet-unit;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      line-height: $laptop-unit-large;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      line-height: $desktop-unit-large;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: relative;
+
+      height: $mobile-unit-xxsmall;
+      box-shadow: 0 $mobile-unit-xxsmall $mobile-unit-xxsmall $muted;
+      top: calc(-#{$mobile-unit} - #{$mobile-unit-xxsmall});
+      width: calc(100% + #{$mobile-unit-xlarge});
+      left: -$mobile-unit;
+
+      @media screen and (min-width: $tablet-device) {
+        height: $tablet-unit-xxsmall;
+        box-shadow: 0 $tablet-unit-xxsmall $tablet-unit-xxsmall $muted;
+        top: calc(-#{$tablet-unit} - #{$tablet-unit-xxsmall});
+        width: calc(100% + #{$tablet-unit-xlarge});
+        left: -$tablet-unit;
+      }
+
+      @media screen and (min-width: $laptop-device) {
+        height: $laptop-unit-xxsmall;
+        box-shadow: 0 $laptop-unit-xxsmall $laptop-unit-xxsmall $muted;
+        top: calc(-#{$laptop-unit} - #{$laptop-unit-xxsmall});
+        width: calc(100% + #{$laptop-unit-xlarge});
+        left: -$laptop-unit;
+      }
+
+      @media screen and (min-width: $desktop-device) {
+        height: $desktop-unit-xxsmall;
+        box-shadow: 0 $desktop-unit-xxsmall $desktop-unit-xxsmall $muted;
+        top: calc(-#{$desktop-unit} - #{$desktop-unit-xxsmall});
+        width: calc(100% + #{$desktop-unit-xlarge});
+        left: -$desktop-unit;
+      }
+    }
+  }
+
+  .mainnav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .navicon {
+
+    @media screen and (min-width: $tablet-device) {
+      height: $tablet-unit;
+      line-height: $tablet-unit;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      height: $laptop-unit;
+      line-height: $laptop-unit;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      height: $desktop-unit;
+      line-height: $desktop-unit;
+    }
+
+    &:first-child {
+      color: $brand-primary;
+
+      width: $mobile-unit-xlarge;
+
+      @media screen and (min-width: $tablet-device) {
+        width: $tablet-unit-xlarge;
+      }
+
+      @media screen and (min-width: $laptop-device) {
+        width: $laptop-unit-xlarge;
+      }
+
+      @media screen and (min-width: $desktop-device) {
+        width: $desktop-unit-xlarge;
+      }
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: $mobile-unit;
+
+      @media screen and (min-width: $tablet-device) {
+        margin-left: $tablet-unit;
+      }
+
+      @media screen and (min-width: $laptop-device) {
+        margin-left: $laptop-unit;
+      }
+
+      @media screen and (min-width: $desktop-device) {
+        margin-left: $desktop-unit;
+      }
+    }
+  }
+
+  .mainnav > li:not(:last-child) {
+    margin-bottom: 0.25em;
+
+    @media screen and (min-width: $tablet-device) {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet-device) {
+      margin-left: $tablet-unit;
+      height: calc(#{$tablet-unit} * 3);
+      margin-top: -$tablet-unit;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      margin-left: $laptop-unit;
+      height: calc(#{$laptop-unit} * 3);
+      margin-top: -$laptop-unit;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      margin-left: $desktop-unit;
+      height: calc(#{$desktop-unit} * 3);
+      margin-top: -$desktop-unit;
+    }
+  }
+
+  .main-nav {
+    a,
+    label {
+      flex-direction: row;
+      display: flex;
+    }
+    @media screen and (min-width: $tablet-device) {
+      height: $tablet-unit;
+      a, label {
+        height: inherit;
+        padding-top: 1em;
+      }
+      > label {
+        display: none;
+      }
+    }
+  }
+}
+
+.mainheader .has-children > ul li {
+  flex-direction: row;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.smallnavtoggle {
+  margin-bottom: 0;
+}
+
+.navtoggleinput:checked ~ .sub-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: $mobile-unit-xlarge;
+  padding-top: $mobile-unit-xsmall;
+
+  > li {
+    margin-right: $mobile-unit;
+
+    @media screen and (min-width: $tablet-device) {
+      margin-left: 0;
+      margin-bottom: $tablet-unit;
+      margin-right: 0;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      margin-bottom: $laptop-unit;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      margin-bottom: $desktop-unit;
+    }
+
+    a, .menuitem {
+      @media screen and (min-width: $tablet-device) {
+        width: 100%;
+      }
+    }
+  }
+
+  > li:first-child {
+    margin-left: 0;
+  }
+
+  > li:last-child {
+    margin-right: 0;
+
+    @media screen and (min-width: $tablet-device) {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $laptop-device) {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $desktop-device) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:before,
+  &:after {
+    @media screen and (min-width: $tablet-device) {
+      height: $tablet-unit;
+      width: $tablet-unit;
+      top: -$tablet-unit/2;
+      transform: rotate(45deg);
+      content: '';
+      background-color: #fff;
+      display: block;
+      position: absolute;
+    }
+    @media screen and (min-width: $laptop-device) {
+      height: $laptop-unit;
+      width: $laptop-unit;
+      top: -$laptop-unit/2;
+    }
+    @media screen and (min-width: $desktop-device) {
+      height: $desktop-unit;
+      width: $desktop-unit;
+      top: -$desktop-unit/2;
+    }
+  }
+
+  &:after {
+    @media screen and (min-width: $tablet-device) {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      z-index: -1;
+    }
+  }
+
+  @media screen and (min-width: $tablet-device) {
+    padding: $tablet-unit;
+    position: absolute;
+    top: calc(#{$tablet-unit-xxlarge} + #{$tablet-unit});
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    padding: $laptop-unit;
+    top: calc(#{$laptop-unit-xxlarge} + #{$laptop-unit});
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    padding: $desktop-unit;
+    top: calc(#{$desktop-unit-xxlarge} + #{$desktop-unit});
+  }
+}
+
+.menuitem {
+  position: relative;
+  display: block;
+
+  @media screen and (min-width: $tablet-device) {
+    height: $tablet-unit;
+    line-height: $tablet-unit;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    height: $laptop-unit;
+    line-height: $laptop-unit;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    height: $desktop-unit;
+    line-height: $desktop-unit;
+  }
+}
+
+.menuitem:after {
+  content: '';
+  display: flex;
+  position: absolute;
+  width: 100%;
+  background-color: $brand-primary;
+  mix-blend-mode: multiply;
+
+  bottom: $mobile-unit-xsmall;
+  height: $mobile-unit-xsmall;
+  line-height: 1em;
+
+  @media screen and (min-width: $tablet-device) {
+    bottom: -$tablet-unit;
+    height: $tablet-unit-xsmall;
+    margin-left: -$tablet-unit-xlarge;
+    width: calc(100% + #{$tablet-unit-xlarge})
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    bottom: -$laptop-unit;
+    height: $laptop-unit-xsmall;
+    margin-left: -$laptop-unit-xlarge;
+    width: calc(100% + #{$laptop-unit-xlarge})
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    bottom: -$desktop-unit;
+    height: $desktop-unit-xsmall;
+    margin-left: -$desktop-unit-xlarge;
+    width: calc(100% + #{$desktop-unit-xlarge})
+  }
+}
+
+.has-children > .menuitem:after {
+  @media screen and (min-width: $tablet-device) {
+    width: calc(100% + #{$tablet-unit-xlarge} + #{$tablet-unit-large})
+  }
+  @media screen and (min-width: $laptop-device) {
+    width: calc(100% + #{$laptop-unit-xlarge} + #{$laptop-unit-large})
+  }
+  @media screen and (min-width: $desktop-device) {
+    width: calc(100% + #{$desktop-unit-xlarge} + #{$desktop-unit-large})
+  }
+}
+
+.has-children > .smallnavtoggle .menuitem:after {
+  width: 100%;
+
+  @media screen and (min-width: $tablet-device) {
+    width: calc(100% + #{$tablet-unit-xlarge} + #{$tablet-unit-large})
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    width: calc(100% + #{$laptop-unit-xlarge} + #{$laptop-unit-large})
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    width: calc(100% + #{$desktop-unit-xlarge} + #{$desktop-unit-large})
+  }
+}
+
+.sub-menu .menuitem:after {
+  width: 100%;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.mainnav > li > a:hover > .menuitem::after,
+.mainnav > li > label:hover > .menuitem::after {
+  mix-blend-mode: normal;
+  z-index: -1;
+
+  height: $mobile-unit-large;
+  width: calc(100% + #{$mobile-unit-xlarge} + #{$mobile-unit-xlarge});
+  margin-bottom: -$mobile-unit-small;
+  margin-left: calc(-#{$mobile-unit-xlarge} - #{$mobile-unit-large});
+  top: 0;
+
+  @media screen and (min-width: $tablet-device) {
+    background-color: $font-color;
+    height: $tablet-unit;
+    margin-left: -$tablet-unit-xlarge;
+    width: calc(100% + #{$tablet-unit-xlarge});
+    top: initial;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    height: $laptop-unit;
+    margin-left: -$laptop-unit-xlarge;
+    width: calc(100% + #{$laptop-unit-xlarge});
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    height: $desktop-unit;
+    margin-left: -$desktop-unit-xlarge;
+    width: calc(100% + #{$desktop-unit-xlarge});
+  }
+}
+
+.mainnav > li.has-children > label:hover > .menuitem:after ,
+.mainnav > li.has-children > a:hover > .menuitem:after {
+  @media screen and (min-width: $tablet-device) {
+    width: calc(100% + #{$tablet-unit-xlarge} + #{$tablet-unit-large});
+  }
+  @media screen and (min-width: $laptop-device) {
+    width: calc(100% + #{$laptop-unit-xlarge} + #{$laptop-unit-large});
+  }
+  @media screen and (min-width: $desktop-device) {
+    width: calc(100% + #{$desktop-unit-xlarge} + #{$desktop-unit-large});
+  }
+}
+
+.mainnav > li > label:hover > .menuitem ,
+.mainnav > li > a:hover > .menuitem,
+.mainnav > li > .sub-menu > li > a:hover > .menuitem {
+  z-index: 3;
+  color: $light;
+  @media screen and (min-width: $tablet-device) {
+    color: inherit;
+  }
+}
+
+.mainnav > li > label:hover > .navicon:first-child,
+.mainnav > li > a:hover > .navicon:first-child{
+  z-index: 4;
+  color: $light;
+  @media screen and (min-width: $tablet-device) {
+    color: inherit;
+  }
+}
+
+.mainnav > li > .sub-menu > li > a:hover > .menuitem::after {
+  mix-blend-mode: normal;
+  z-index: -1;
+
+  height: $mobile-unit-large;
+  width: calc(100% + #{$mobile-unit-small});
+  margin-bottom: -$mobile-unit-xsmall;
+  margin-left: -$mobile-unit-xsmall;
+
+  @media screen and (min-width: $tablet-device) {
+    height: $tablet-unit-small;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    height: $laptop-unit-small;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    height: $desktop-unit-small;
+  }
+}

@@ -1,0 +1,20 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <section class="wrapper padding margin">
+        {{ page.content }}
+        <div class="cards">
+            {% for image in page.media.images|reverse %}
+            <div class="card">
+
+                <a href="{{image.cloudcasturl}}">
+                <figure class="cardimage">
+                    <img data-src="{{image.url}}" class="unveil">
+                    <figcaption>{{image.mixname}}</figcaption>
+                </figure>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

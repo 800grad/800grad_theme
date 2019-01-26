@@ -1,0 +1,28 @@
+.is--home section footer {
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,.1);
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(0,0,0, .1);
+  padding: $mobile-unit 0 0 0;
+  margin-top: $mobile-unit;
+
+  @media screen and (min-width: $tablet-device) {
+    padding: $tablet-unit 0 0 0;
+    margin-top: $mobile-unit;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    padding: $laptop-unit 0 0 0;
+    margin-top: $laptop-unit;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    padding: $desktop-unit 0 0 0;
+    margin-top: $desktop-unit;
+  }
+
+  .btn {
+    margin: 0;
+  }
+}

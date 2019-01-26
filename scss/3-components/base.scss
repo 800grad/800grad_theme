@@ -1,0 +1,120 @@
+html {
+  background-color: #efefef;
+}
+
+body {
+  font-family: $base-font-stack;
+  padding-top: $mobile-unit-xxlarge;
+  min-height: $mobile-device;
+  min-width: $mobile-device;
+
+  @media screen and (min-width: $mobile-wide-device) {
+
+  }
+
+  @media screen and (min-width: $tablet-device) {
+    padding-top: $tablet-unit-xxlarge;
+  }
+
+  @media screen and (min-width: $tablet-wide-device) {
+
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    padding-top: $laptop-unit-xxlarge;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    padding-top: $desktop-unit-xxlarge;
+  }
+}
+
+#top {
+  animation: fadeInFromNone 1s linear;
+  min-width: $mobile-device - $mobile-unit - $mobile-unit;
+
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  min-width: $mobile-unit * 10;
+  max-width: $desktop-device - $desktop-unit  - $desktop-unit;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.padding {
+  padding: $mobile-unit;
+
+  @media screen and (min-width: $tablet-device) {
+    padding: $tablet-unit;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    padding: $laptop-unit;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    padding: $desktop-unit;
+  }
+}
+
+.margin {
+  margin: $mobile-unit $mobile-unit 0 $mobile-unit;
+
+  @media screen and (min-width: $tablet-device) {
+    margin: $tablet-unit $tablet-unit 0 $tablet-unit;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    margin: $laptop-unit $laptop-unit 0 $laptop-unit;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    margin: $desktop-unit auto 0 auto;
+  }
+}
+
+section {
+  background: white;
+  box-shadow: 0 0 $mobile-unit-xsmall $muted;
+
+  @media screen and (min-width: $tablet-device) {
+    box-shadow: 0 0 $tablet-unit-xsmall $muted;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    box-shadow: 0 0 $laptop-unit-xsmall $muted;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    box-shadow: 0 0 $desktop-unit-xsmall $muted;
+  }
+
+  p:last-child {
+    margin-bottom: 1em;
+  }
+}
+
+
+.unveil {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+
+  &::before,
+  &::after {
+    opacity: 0;
+    transition: opacity .3s ease-in;
+  }
+
+  &.unvieled {
+    opacity: 1;
+
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+}

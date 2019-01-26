@@ -1,0 +1,11 @@
+{% set image = page.media.images|first %}
+{% set video = page.media.videos|first %}
+
+<section class="wrapper margin hero" style="background-image: url({{ image.url }})">
+    <video autoplay muted loop preload="none" class="herovideo">
+        <source data-src="{{ video.url }}" src="" type="video/mp4">
+    </video>
+    <div class="herocontent">
+        {{ content }}
+    </div>
+</section>

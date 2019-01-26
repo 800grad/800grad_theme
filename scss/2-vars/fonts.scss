@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeueBold.eot');
+    src: local('Bebas Neue Bold'), local('BebasNeueBold'),
+        url('../fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BebasNeueBold.woff2') format('woff2'),
+        url('../fonts/BebasNeueBold.woff') format('woff'),
+        url('../fonts/BebasNeueBold.ttf') format('truetype'),
+        url('../fonts/BebasNeueBold.svg#BebasNeueBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeueRegular.eot');
+    src: local('Bebas Neue Regular'), local('BebasNeueRegular'),
+        url('../fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('../fonts/BebasNeueRegular.woff') format('woff'),
+        url('../fonts/BebasNeueRegular.ttf') format('truetype'),
+        url('../fonts/BebasNeueRegular.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Bold.eot');
+    src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+    url('../fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SourceSansPro-Bold.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Bold.woff') format('woff'),
+    url('../fonts/SourceSansPro-Bold.ttf') format('truetype'),
+    url('../fonts/SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.eot');
+    src: local('Source Sans Pro'), local('SourceSansPro-Regular'),
+    url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Regular.woff') format('woff'),
+    url('../fonts/SourceSansPro-Regular.ttf') format('truetype'),
+    url('../fonts/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-BoldItalic.eot');
+    src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldIt'),
+    url('../fonts/SourceSansPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SourceSansPro-BoldItalic.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-BoldItalic.woff') format('woff'),
+    url('../fonts/SourceSansPro-BoldItalic.ttf') format('truetype'),
+    url('../fonts/SourceSansPro-BoldItalic.svg#SourceSansPro-BoldIt') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Italic.eot');
+    src: local('Source Sans Pro Italic'), local('SourceSansPro-It'),
+    url('../fonts/SourceSansPro-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SourceSansPro-Italic.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Italic.woff') format('woff'),
+    url('../fonts/SourceSansPro-Italic.ttf') format('truetype'),
+    url('../fonts/SourceSansPro-Italic.svg#SourceSansPro-It') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}

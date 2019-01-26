@@ -1,0 +1,69 @@
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutToNone {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes colorswitch_primary {
+  0% {
+    color: $brand-primary;
+  }
+
+  100% {
+    color: $font-color;
+  }
+}
+
+@keyframes colorswitch_secondary {
+  0% {
+    color: $font-color;
+  }
+
+  100% {
+    color: $brand-primary;
+  }
+}
+
+
+@keyframes colorswitch_primary_invert {
+  0% {
+    background-color: $brand-primary;
+  }
+
+  100% {
+    background-color: $font-color;
+  }
+}
+
+@keyframes colorswitch_secondary_invert {
+  0% {
+    background-color: $font-color;
+  }
+
+  100% {
+    background-color: $brand-primary;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

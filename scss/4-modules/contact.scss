@@ -1,0 +1,88 @@
+.contact {
+  background-color: $brand-primary;
+  color: $container-color;
+
+  h2::after {
+    background-color: $container-color;
+  }
+
+  form {
+    display: flex;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+
+      @media screen and (min-width: $tablet-device) {
+        width: calc(50% - 1em);
+      }
+
+      &[name="message"] {
+        width: 100%;
+        align-items: center;
+      }
+
+      label {
+        align-self: flex-start;
+        height: 2em;
+        margin: 0;
+      }
+
+      input, textarea {
+        margin-bottom: 0;
+        background-color: $container-color;
+        color: $brand-primary;
+        border-color: transparent;
+        padding: 0.5em;
+        border-radius: $laptop-unit-xsmall;
+
+        &:first-line {padding-left: 20px;}
+
+        &::placeholder {color: #fff; opacity: 1}
+
+        &:placeholder-shown {
+          border: 1px solid #fff;
+          background-color: transparent;
+          margin-bottom: 2em;
+        }
+
+        &:placeholder-shown + label {
+          display: none;
+        }
+      }
+      textarea:placeholder-shown {
+        margin-bottom: 0;
+      }
+
+      .btn {
+        background-color: $container-color;
+        position: absolute;
+        bottom: 2em;
+        right: 0;
+        border: 0;
+      }
+
+      textarea:placeholder-shown ~ .btn {
+        bottom: 0;
+      }
+
+      .btn:hover {
+        background-color: $brand-primary;
+        color: $container-color;
+        border-color: transparent;
+      }
+    }
+
+    fieldset:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

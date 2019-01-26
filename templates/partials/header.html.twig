@@ -1,0 +1,18 @@
+{% block header %}
+    <header class="mainheader">
+        <div class="wrapper padding">
+            <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
+                MTHRFCKN<strong>BASS</strong>
+            </a>
+            {% block header_navigation %}
+            <nav class="main-nav">
+                <label for="navtoggle">
+                    <i class="fa fa-bars"></i>
+                </label>
+                <input type="checkbox" class="navtoggleinput" id="navtoggle">
+                {% include 'partials/navigation.html.twig' %}
+            </nav>
+            {% endblock %}
+        </div>
+    </header>
+{% endblock %}

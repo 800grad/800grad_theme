@@ -1,0 +1,168 @@
+section h1,
+section h2 {
+  font-family: $headline-font-stack;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $mobile-unit * 12;
+  font-size: $mobile-headline-unit;
+  margin-bottom: $mobile-unit-large;
+
+  @media screen and (min-width: $tablet-device) {
+    max-width: $tablet-unit * 12;
+    font-size: $tablet-headline-unit;
+    margin-bottom: $tablet-unit-large;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    max-width: $laptop-unit * 12;
+    font-size: $laptop-headline-unit;
+    margin-bottom: $laptop-unit-large;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    max-width: $desktop-unit * 12;
+    font-size: $desktop-headline-unit;
+    margin-bottom: $desktop-unit-large;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: $brand-primary;
+    height: $mobile-unit-small;
+    max-width: $mobile-unit * 8;
+    margin-top: $mobile-unit;
+
+    @media screen and (min-width: $tablet-device) {
+      height: $tablet-unit-small;
+      max-width: $tablet-unit * 8;
+      margin-top: $tablet-unit;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      height: $laptop-unit-small;
+      max-width: $laptop-unit * 8;
+      margin-top: $laptop-unit;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      height: $desktop-unit-small;
+      max-width: $desktop-unit * 8;
+      margin-top: $desktop-unit;
+    }
+  }
+}
+
+section h2,
+section h1 {
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  @media screen and (min-width: $tablet-device) {
+    margin-top: 0.5em;
+    margin-top: 0.5em;
+  }
+}
+
+.logo {
+  color: inherit;
+  text-decoration: none;
+  font-family: $headline-font-stack;
+
+  font-size: $mobile-unit;
+  line-height: $mobile-unit;
+  height:  $mobile-unit;
+
+  @media screen and (min-width: $tablet-device) {
+    font-size: $tablet-unit;
+    line-height: $tablet-unit;
+    height: $tablet-unit;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    font-size: $laptop-unit;
+    line-height: $laptop-unit;
+    height: $laptop-unit;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    font-size: $desktop-unit;
+    line-height: $desktop-unit;
+    height: $desktop-unit;
+  }
+
+  strong {
+    color: $brand-primary;
+  }
+}
+
+main .logo {
+  font-size: 1.4em;
+  position: relative;
+  line-height: 1rem;
+  top: 0.075em;
+}
+
+a {
+  color: $brand-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($brand-primary, 15)
+  }
+
+  &:focus {
+    outline: $mobile-unit-xxsmall solid rgba($brand-primary, 0.2);
+    outline-offset: $mobile-unit-small;
+
+    @media screen and (min-width: $tablet-device) {
+      outline: $tablet-unit-xxsmall solid rgba($brand-primary, 0.2);
+      outline-offset: $tablet-unit-small;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      outline: $laptop-unit-xxsmall solid rgba($brand-primary, 0.2);
+      outline-offset: $laptop-unit-small;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      outline: $desktop-unit-xxsmall solid rgba($brand-primary, 0.2);
+      outline-offset: $desktop-unit-small;
+    }
+  }
+}
+
+.intro {
+  text-align: center;
+  font-size: $mobile-font-intro;
+
+  @media screen and (min-width: $tablet-device) {
+    font-size: $tablet-font-intro;
+    padding: 0 $tablet-unit $tablet-unit $tablet-unit;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    font-size: $laptop-font-intro;
+    padding: 0 $laptop-unit $laptop-unit $laptop-unit;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    font-size: $desktop-font-intro;
+    padding: 0 $desktop-unit $desktop-unit $desktop-unit;
+  }
+
+  .logo {
+    font-size: inherit
+  }
+
+  :last-child {margin-bottom: 0}
+}

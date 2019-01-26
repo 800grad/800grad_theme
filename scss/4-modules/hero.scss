@@ -1,0 +1,198 @@
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeInFromNone 2s ease-out;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  overflow: hidden;
+  max-height: calc(100vh - (5 * #{$mobile-unit}));
+  min-height: $mobile-device * 0.8;
+
+  @media screen and (min-width: $tablet-device) {
+    max-height: calc(100vh - (5 * #{$tablet-unit}));
+    min-height: 20rem;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    max-height: calc(100vh - (5 * #{$laptop-unit}));
+    min-height: 24rem;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    max-height: calc(100vh - (5 * #{$desktop-unit}));
+    min-height: 30rem;
+  }
+
+  @media screen and (orientation: landscape) {
+    height: 100%;
+  }
+
+  @media screen and (orientation: portrait) {
+    padding-top: calc(100% - #{$mobile-unit-xlarge});
+  }
+
+  @media screen and (orientation: portrait) and (min-width: $tablet-device) {
+    padding-top: calc(100% - #{$tablet-unit-xlarge});
+  }
+
+  @media screen and (orientation: portrait) and (min-width: $laptop-device) {
+    padding-top: calc(100% - #{$laptop-unit-xlarge});
+  }
+
+  @media screen and (orientation: portrait) and (min-width: $desktop-device) {
+    padding-top: calc(100% - #{$desktop-unit-xlarge});
+  }
+
+  &::before {
+    content: '';
+    display: flex;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    background-color: $brand-primary;
+    mix-blend-mode: color;
+    filter: grayscale(75%);
+    animation: colorswitch_secondary_invert;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    z-index: 1;
+  }
+  &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, $brand-primary 0%, $brand-third 100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+  &:hover::before {
+    animation: colorswitch_primary_invert;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+  }
+}
+
+.herocontent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  right: 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+
+  padding: $mobile-unit;
+
+  h1 {
+    color: $light;
+
+    text-shadow: 0 $mobile-unit-xsmall $mobile-unit-small $muted;
+    max-width: $mobile-unit * 12;
+    font-size: $mobile-unit-xlarge;
+
+    @media screen and (min-width: $tablet-device) {
+      text-shadow: 0 $tablet-unit-xsmall $tablet-unit-small $muted;
+      max-width: $tablet-unit * 12;
+      font-size: $tablet-unit-xlarge;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      text-shadow: 0 $laptop-unit-xsmall $laptop-unit-small $muted;
+      max-width: $laptop-unit * 12;
+      font-size: $laptop-unit-xlarge;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      text-shadow: 0 $desktop-unit-xsmall $desktop-unit-small $muted;
+      max-width: $desktop-unit * 12;
+      font-size: $desktop-unit-xlarge;
+    }
+
+    &::after {
+      background-color: #fff;
+      box-shadow: 0 2px 4px #000;
+    }
+  }
+
+  p {
+    display: flex;
+    margin-bottom: 0 !important;
+  }
+
+  a {
+    color: $light;
+    font-family: $headline-font-stack;
+
+    border: $mobile-unit-xsmall solid;
+    border-radius: $mobile-unit-xlarge;
+    padding: $mobile-unit-small;
+    font-size: $mobile-unit;
+
+    @media screen and (min-width: $tablet-device) {
+      border: $tablet-unit-xsmall solid;
+      border-radius: $tablet-unit-xlarge;
+      padding: $tablet-unit-small;
+      font-size: $tablet-unit;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      border: $laptop-unit-xsmall solid;
+      border-radius: $laptop-unit-xlarge;
+      padding: $laptop-unit-small;
+      font-size: $laptop-unit;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      border: $desktop-unit-xsmall solid;
+      border-radius: $desktop-unit-xlarge;
+      padding: $desktop-unit-small;
+      font-size: $desktop-unit;
+    }
+
+    svg {
+      margin-left: 8px;
+    }
+  }
+}
+
+.herovideo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  object-fit: cover;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+
+  video {
+    display: flex;
+    min-height: 100%;
+
+    @media screen and (orientation: portrait) {
+      max-height: 100vh;
+    }
+
+    @media screen and (min-device-aspect-ratio: 16/9) {
+      min-width: calc(100% + 64px);
+      min-height: 100vh;
+      max-height: initial;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.banner {
+  background-color: $brand-primary;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 0;
+
+  margin-left: -#{$mobile-unit};
+  margin-bottom: #{$mobile-unit};
+  width: calc(100% + #{$mobile-unit} + #{$mobile-unit});
+
+
+  @media screen and (min-width: $tablet-device) {
+    margin-left: -#{$tablet-unit};
+    margin-bottom: #{$tablet-unit};
+    width: calc(100% + #{$tablet-unit} + #{$tablet-unit});
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    margin-left: -#{$laptop-unit};
+    margin-bottom: #{$laptop-unit};
+    width: calc(100% + #{$laptop-unit} + #{$laptop-unit});
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    margin-left: -#{$desktop-unit};
+    margin-bottom: #{$desktop-unit};
+    width: calc(100% + #{$desktop-unit} + #{$desktop-unit});
+  }
+
+  @media screen and (orientation: landscape) {
+    padding-top: calc(80vh - #{$mobile-unit} - #{$mobile-unit});
+  }
+
+  @media screen and (orientation: portrait) {
+    padding-top: calc(50vh - #{$mobile-unit} - #{$mobile-unit});
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: color;
+    background-color: $brand-primary;
+    filter: grayscale(75%);
+  }
+}

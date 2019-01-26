@@ -1,0 +1,81 @@
+// fonts
+
+$base-font-stack:       "Source Sans Pro",  arial,    sans-serif;
+$headline-font-stack:   "Bebas Neue",       impact,   sans-serif;
+
+// colors
+
+$brand-primary:     hsl(350, 80%, 40%);
+$neutral:           #efefef;
+$brand-secondary:   adjust-color($brand-primary, $hue: 50%, $saturation: 20%, $lightness: 20%);
+$brand-third:       adjust-color($brand-primary, $hue: 200%);
+$neutral-invert:    invert($neutral, 1);
+$muted:             transparentize($neutral-invert, 0.8);
+$light:             transparentize($neutral, 0.1);
+$border-color:      $muted;
+$container-color:   $light;
+$font-color:        $neutral-invert;
+
+// units
+
+// > mobile
+$mobile-device:         20rem;                                                        // 320px (1 col)
+$mobile-wide-device:    32rem;                                                        // 512px (2 col)
+$mobile-unit:           1rem;                                                         // 16px
+
+$mobile-unit-xxsmall:   $mobile-unit    /   16;                                       // 1px
+$mobile-unit-xsmall:    $mobile-unit    /   4;                                        // 4px
+$mobile-unit-small:     $mobile-unit    /   2;                                        // 8px
+$mobile-unit-large:     $mobile-unit    *   1.5;                                      // 24px
+$mobile-unit-xlarge:    $mobile-unit    *   2.25;                                     // 36px
+$mobile-unit-xxlarge:   $mobile-unit    *   3;                                        // 48px
+
+$mobile-font-unit:      $mobile-unit    -   (2 * $mobile-unit-xxsmall);               // 14px
+$mobile-font-intro:     $mobile-unit    +   (2 * $mobile-unit-xxsmall);               // 18px
+$mobile-headline-unit:  $mobile-unit-large;                                           // 24px
+
+// > tablet
+$tablet-device:         48rem;                                                        // 768px (2 col)
+$tablet-wide-device:    63rem;                                                        // 1008px (3 col)
+$tablet-unit:           1rem / 16 *20 ;                                               // 20px
+
+$tablet-unit-xxsmall:   $tablet-unit    / 20;                                         // 1px
+$tablet-unit-xsmall:    $tablet-unit    / 20 * 6;                                     // 6px
+$tablet-unit-small:     $tablet-unit    / 20 * 12;                                    // 12px
+$tablet-unit-large:     $tablet-unit    / 20 * 36;                                    // 36px
+$tablet-unit-xlarge:    $tablet-unit    / 20 * 48;                                    // 48px
+$tablet-unit-xxlarge:   $tablet-unit    / 20 * 64;                                    // 64px
+
+$tablet-font-unit:      $tablet-unit    -   (4 * $tablet-unit-xxsmall);               // 14px
+$tablet-font-intro:     $tablet-unit    +   (4 * $tablet-unit-xxsmall);               // 18px
+$tablet-headline-unit:  $tablet-unit-large;                                           // 36px
+
+// > laptop
+$laptop-device:         78rem;                                                        // 1408px
+$laptop-unit:           1rem / 16 * 24;                                               // 24px
+
+$laptop-unit-xxsmall:   $laptop-unit    / 24 * 2;                                     // 2px
+$laptop-unit-xsmall:    $laptop-unit    / 24 * 8;                                     // 8px
+$laptop-unit-small:     $laptop-unit    / 24 * 16;                                    // 16px
+$laptop-unit-large:     $laptop-unit    / 24 * 36;                                    // 36px
+$laptop-unit-xlarge:    $laptop-unit    / 24 * 52;                                    // 52px
+$laptop-unit-xxlarge:   $laptop-unit    / 24 * 72;                                    // 72px
+
+$laptop-font-unit:      $laptop-unit    -   (3 * $laptop-unit-xxsmall);               // 30px
+$laptop-font-intro:     $laptop-unit    +   (3 * $laptop-unit-xxsmall);               // 42px
+$laptop-headline-unit:  $laptop-unit-xlarge;                                          // 52px
+
+// > desktop
+$desktop-device:         96rem;                                                       // 1904px
+$desktop-unit:           2rem;                                                         // 32px
+
+$desktop-unit-xxsmall:   $desktop-unit    /   32 * 2;                                  // 2px
+$desktop-unit-xsmall:    $desktop-unit    /   32 * 12;                                 // 12px
+$desktop-unit-small:     $desktop-unit    /   32 * 20;                                 // 20px
+$desktop-unit-large:     $desktop-unit    /   32 * 48;                                 // 48px
+$desktop-unit-xlarge:    $desktop-unit    /   32 * 64;                                 // 64px
+$desktop-unit-xxlarge:   $desktop-unit    /   32 * 96;                                 // 96px
+
+$desktop-font-unit:      $desktop-unit    -   (4 * $desktop-unit-xxsmall);             // 24px
+$desktop-font-intro:     $desktop-unit    +   (4 * $desktop-unit-xxsmall);             // 40px
+$desktop-headline-unit:  $desktop-unit-xlarge;                                         // 62px

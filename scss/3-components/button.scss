@@ -1,0 +1,60 @@
+.btn {
+  border-radius: 0.5rem;
+  border: 0.0625rem solid;
+  color: $brand-primary;
+  padding: $mobile-unit-small;
+
+  @media screen and (min-width: $tablet-device) {
+    padding: $tablet-unit-small;
+  }
+
+  @media screen and (min-width: $laptop-device) {
+    padding: $laptop-unit-small;
+  }
+
+  @media screen and (min-width: $desktop-device) {
+    padding: $desktop-unit-small;
+  }
+
+  &.is--primary {
+    color: #fff;
+    background-color: $brand-primary;
+  }
+
+  &.is--secondary {
+    color: #fff;
+    background-color: $brand-primary;
+  }
+
+  &.is--large {
+    padding: $mobile-unit;
+
+    @media screen and (min-width: $tablet-device) {
+      padding: $tablet-unit;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      padding: $laptop-unit;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      padding: $desktop-unit;
+    }
+  }
+
+  &.is--small {
+    padding: $mobile-unit-xsmall;
+
+    @media screen and (min-width: $tablet-device) {
+      padding: $tablet-unit-xsmall;
+    }
+
+    @media screen and (min-width: $laptop-device) {
+      padding: $laptop-unit-xsmall;
+    }
+
+    @media screen and (min-width: $desktop-device) {
+      padding: $desktop-unit-xsmall;
+    }
+  }
+}
