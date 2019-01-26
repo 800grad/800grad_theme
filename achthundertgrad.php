@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class Iloveu extends Theme
+class achthundertgrad extends Theme
 {
     // Access plugin events in this class
 }
