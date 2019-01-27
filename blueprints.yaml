@@ -5,7 +5,7 @@ icon: circle-o-notch
 author:
   name: Benjamin Wunn
   email: benjamin.wunn@icloud.com
-homepage: https://github.com/800grad/800grad_theme/
+homepage: https://github.com/800grad/800grad_theme.git
 demo: http://800grad.de
 keywords: grav, theme, etc
 bugs: https://github.com/800grad/800grad_theme/issues

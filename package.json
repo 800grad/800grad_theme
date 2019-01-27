@@ -1,0 +1,21 @@
+{
+  "name": "achthundertgrad",
+  "version": "1.0.0",
+  "description": "800grad theme for grav cms",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/800grad/800grad_theme.git"
+  },
+  "keywords": [
+    "800grad",
+    "grav",
+    "theme"
+  ],
+  "author": "Benjamin Wunn",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/800grad/800grad_theme/issues"
+  },
+  "homepage": "https://github.com/800grad/800grad_theme#readme"
+}
