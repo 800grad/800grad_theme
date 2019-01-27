@@ -1,16 +1,16 @@
 name: Iloveu
 version: 0.1.0
 description: iloveu dj crew
-icon: rebel
+icon: circle-o-notch
 author:
   name: Benjamin Wunn
   email: benjamin.wunn@icloud.com
-homepage: https://github.com/benjamin-wunn/grav-theme-iloveu
-demo: http://demo.yoursite.com
+homepage: https://github.com/800grad/800grad_theme/
+demo: http://800grad.de
 keywords: grav, theme, etc
-bugs: https://github.com/benjamin-wunn/grav-theme-iloveu/issues
-readme: https://github.com/benjamin-wunn/grav-theme-iloveu/blob/develop/README.md
-license: MIT
+bugs: https://github.com/800grad/800grad_theme/issues
+readme: https://github.com/800grad/800grad_theme/README.md
+license: WTFPL
 
 form:
   validation: loose

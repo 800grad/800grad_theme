@@ -1,7 +1,11 @@
-# Iloveu Theme
+# 800Grad Theme
 
-The **Iloveu** Theme is for [Grav CMS](http://github.com/getgrav/grav).  This README.md file should be modified to describe the features, installation, configuration, and general usage of this theme.
 
 ## Description
+This theme is made for [Grav CMS](http://github.com/getgrav/grav) and used mainly by the dj collective 800grad.
 
-iloveu dj crew
+Author
+Benjamin Wunn (2019)
+
+## License
+[WTFPL](http://www.wtfpl.net/)
