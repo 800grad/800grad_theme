@@ -6,11 +6,11 @@ $headline-font-stack:   "Bebas Neue",       impact,   sans-serif;
 // colors
 
 $brand-primary:     hsl(350, 80%, 40%);
-$neutral:           #efefef;
+$neutral:           #eee;
 $brand-secondary:   adjust-color($brand-primary, $hue: 50%, $saturation: 20%, $lightness: 20%);
 $brand-third:       adjust-color($brand-primary, $hue: 200%);
-$neutral-invert:    invert($neutral, 1);
-$muted:             transparentize($neutral-invert, 0.8);
+$neutral-invert:    #222;
+$muted:             transparentize($neutral-invert, 0.7);
 $light:             transparentize($neutral, 0.1);
 $border-color:      $muted;
 $container-color:   $light;

@@ -23,12 +23,11 @@ var paths = {
     output: 'dist/',
     scripts: {
         input: 'src/js/*',
-        polyfills: '.polyfill.js',
-        output: 'dist/js/'
+        output: 'js/'
     },
     styles: {
-        input: 'src/sass/**/*.{scss,sass}',
-        output: 'dist/css/'
+        input: 'src/sass/style.scss',
+        output: 'css/'
     },
     svgs: {
         input: 'src/svg/*.svg',
@@ -38,7 +37,7 @@ var paths = {
         input: 'src/copy/**/*',
         output: 'dist/'
     },
-    reload: './dist/'
+    reload: './'
 };
 
 
@@ -124,9 +123,9 @@ var cleanDist = function (done) {
 
 // Repeated JavaScript tasks
 var jsTasks = lazypipe()
-    .pipe(header, banner.full, {
-        package: package
-    })
+    //.pipe(header, banner.full, {
+    //    package: package
+    //})
     .pipe(optimizejs)
     .pipe(dest, paths.scripts.output)
     .pipe(rename, {
@@ -134,9 +133,9 @@ var jsTasks = lazypipe()
     })
     .pipe(uglify)
     .pipe(optimizejs)
-    .pipe(header, banner.min, {
-        package: package
-    })
+    //.pipe(header, banner.min, {
+    //    package: package
+    //})
     .pipe(dest, paths.scripts.output);
 
 // Lint, minify, and concatenate scripts
@@ -154,19 +153,6 @@ var buildScripts = function (done) {
 
                 // Setup a suffix variable
                 var suffix = '';
-
-                // If separate polyfill files enabled
-                if (settings.polyfills) {
-
-                    // Update the suffix
-                    suffix = '.polyfills';
-
-                    // Grab files that aren't polyfills, concatenate them, and process them
-                    src([file.path + '/*.js', '!' + file.path + '/*' + paths.scripts.polyfills])
-                        .pipe(concat(file.relative + '.js'))
-                        .pipe(jsTasks());
-
-                }
 
                 // Grab all files and concatenate them
                 // If separate polyfills enabled, this will have .polyfills in the filename
@@ -282,9 +268,7 @@ var startServer = function (done) {
 
     // Initialize BrowserSync
     browserSync.init({
-        server: {
-            baseDir: paths.reload
-        }
+        proxy: "localhost:8080"
     });
 
     // Signal completion
